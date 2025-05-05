@@ -15,8 +15,7 @@ namespace Villahermosaaa.Resources
 {
     public partial class Dashboard : Form
     {
-        //erica
-        //villahermosa
+       
         public Dashboard(string name, string path)
         {
             
