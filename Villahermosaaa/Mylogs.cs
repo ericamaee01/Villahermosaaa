@@ -1,0 +1,15 @@
+﻿using Spire.Xls;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Villahermosaaa
+{
+    internal class Mylogs
+    {
+        Workbook book = new Workbook();
+    }
+   
+}
