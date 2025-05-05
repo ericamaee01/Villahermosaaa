@@ -1,9 +1,11 @@
 ﻿using Spire.Xls;
+using Spire.Xls.Core;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -150,9 +152,14 @@ namespace Villahermosaaa
             Form2 form2 = new Form2();
             form2.insertdata(name, gender, hobbies, favcolor, address, email, birthdate, age, course, saying, username, password, "1", profilePicture);
 
-            // Save to Excel
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx");
+            string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+
+            string folder = "Book1";
+            string file = "Book1.xlsx";
+            string path = Path.Combine(Filelocation, folder, file);
+            Workbook workbook = new Workbook();
+            workbook.LoadFromFile(path);
             Worksheet sh = book.Worksheets[0];
             int r = sh.LastRow + 1;
 
@@ -172,8 +179,9 @@ namespace Villahermosaaa
             sh.Range[r, 14].Value = profilePicture;
 
             // ✅ Proper save
-            book.SaveToFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx", ExcelVersion.Version2016);
+            workbook.SaveToFile(path, ExcelVersion.Version2016);
 
+            DataTable dt = sh.ExportDataTable();
             MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Reset form
@@ -333,7 +341,12 @@ namespace Villahermosaaa
 
             // Save to Excel
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx");
+            string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+
+            string folder = "Book1";
+            string file = "Book1.xlsx";
+            string path = Path.Combine(Filelocation, folder, file);
+            Workbook workbook = new Workbook();
             Worksheet sh = book.Worksheets[0];
             int r = sh.LastRow + 1;
 
@@ -353,7 +366,7 @@ namespace Villahermosaaa
             sh.Range[r, 14].Value = profilePicture;
 
             // ✅ Proper save
-            book.SaveToFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx", ExcelVersion.Version2016);
+            workbook.SaveToFile(path, ExcelVersion.Version2016);
 
             MessageBox.Show("Successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

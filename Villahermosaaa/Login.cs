@@ -26,7 +26,11 @@ namespace Villahermosaaa
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx");
+            string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+
+            string folder = "Book1";
+            string file = "Book1.xlsx";
+            string path = Path.Combine(Filelocation, folder, file);
             Worksheet sheet = book.Worksheets[0];
             bool loginSuccess = false;
 

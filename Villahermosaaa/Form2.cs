@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -24,7 +25,11 @@ namespace Villahermosaaa
         public void LoadExcelFile()
         {
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx");
+            string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+
+            string folder = "Book1";
+            string file = "Book1.xlsx";
+            string path = Path.Combine(Filelocation, folder, file);
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
             dataGridView1.DataSource = dt;
