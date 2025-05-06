@@ -225,19 +225,20 @@ namespace Villahermosaaa.Resources
 
         }
 
-        private void btndashboard_Click(object sender, EventArgs e)
+      
+        private void btnActive_Click(object sender, EventArgs e)
         {
-            loadform(new home ());
+            loadform(new Active());
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnInactive_Click(object sender, EventArgs e)
         {
-
+            loadform(new Inactive());
         }
 
-        private void label_Click(object sender, EventArgs e)
+        private void btnLogs_Click(object sender, EventArgs e)
         {
-
+            loadform(new Logs());
         }
     }
 }

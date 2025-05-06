@@ -16,8 +16,7 @@ namespace Villahermosaaa
 {
     public partial class Login : Form
     {
-       
-       
+        Mylogs logs = new Mylogs();
         public Login()
         {
             InitializeComponent();
@@ -29,8 +28,8 @@ namespace Villahermosaaa
             Workbook book = new Workbook();
             string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
 
-            string folder = "Book1";
-            string file = "Book1.xlsx";
+            string folder = "book1";
+            string file = "book1.xlsx";
             string path = Path.Combine(Filelocation, folder, file);
             Worksheet sheet = book.Worksheets[0];
             bool loginSuccess = false;
@@ -45,18 +44,22 @@ namespace Villahermosaaa
                     string profilePath = sheet.Range[i, 14].Value;
                     string name = txtUsername.Text.Trim();
 
-
-                   
-                    MessageBox.Show("Login successful");
+                    MessageBox.Show("Login successful", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
 
                     this.Hide();
                     Dashboard dashboard = new Dashboard(name, profilePath); //  Now it matches your constructor
                     dashboard.ShowDialog();
-                    this.Show();
-
+                    loginSuccess = true;
+                    this.Close();
+                    break;
 
                 }
 
+            }
+            if (!loginSuccess)
+            {
+                MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (!loginSuccess)
             {
@@ -79,25 +82,19 @@ namespace Villahermosaaa
                 }
             }
 
-
-        }
-
-        private void btnCLEAR_Click(object sender, EventArgs e)
-        {
-            txtUsername.Clear();
-            txtPassword.Clear();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked)
+            if (checkBox1.Checked)
             {
-                txtPassword.UseSystemPasswordChar = true;
+                txtPassword.UseSystemPasswordChar = true; // Show password
             }
             else
             {
-                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.UseSystemPasswordChar = false; // Hide password
             }
         }
     }
+
 }

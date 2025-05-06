@@ -111,6 +111,12 @@
     <Compile Include="Mylogs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Active.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Active.Designer.cs">
+      <DependentUpon>Active.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,18 @@
     </Compile>
     <Compile Include="Resources\home design.Designer.cs">
       <DependentUpon>home design.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Inactive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Inactive.Designer.cs">
+      <DependentUpon>Inactive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Logs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Logs.Designer.cs">
+      <DependentUpon>Logs.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -148,6 +166,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Active.resx">
+      <DependentUpon>Active.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +177,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\home design.resx">
       <DependentUpon>home design.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Inactive.resx">
+      <DependentUpon>Inactive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Logs.resx">
+      <DependentUpon>Logs.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

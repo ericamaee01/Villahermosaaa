@@ -242,22 +242,19 @@ namespace Villahermosaaa
                 return;
             }
 
-            if (radFemale.Checked)
-                gender = radFemale.Text.Trim();
-            else if (radMale.Checked)
-                gender = radMale.Text.Trim();
-
+            // Gender selection
+            gender = radFemale.Checked ? radFemale.Text : radMale.Checked ? radMale.Text : "";
             if (string.IsNullOrEmpty(gender))
             {
                 MessageBox.Show("Please select a gender.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (cbCooking.Checked) hobbies += cbCooking.Text.Trim() + ", ";
-            if (cbSinging.Checked) hobbies += cbSinging.Text.Trim() + ", ";
-            if (cbDancing.Checked) hobbies += cbDancing.Text.Trim() + ", ";
+            // Hobbies selection
+            if (cbCooking.Checked) hobbies += cbCooking.Text + ", ";
+            if (cbSinging.Checked) hobbies += cbSinging.Text + ", ";
+            if (cbDancing.Checked) hobbies += cbDancing.Text + ", ";
             hobbies = hobbies.TrimEnd(',', ' ');
-
             if (string.IsNullOrEmpty(hobbies))
             {
                 MessageBox.Show("Please select at least one hobby.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -334,41 +331,60 @@ namespace Villahermosaaa
                 return;
             }
 
-            i++;
-
-            Form2 form2 = new Form2();
-            form2.Update(name, gender, hobbies, favcolor, address, email, birthdate, age, course, saying, username, password, "1", profilePicture);
-
-            // Save to Excel
+            // Load the Excel file to update
             Workbook book = new Workbook();
-            string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-
-            string folder = "Book1";
-            string file = "Book1.xlsx";
-            string path = Path.Combine(Filelocation, folder, file);
-            Workbook workbook = new Workbook();
+            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx");
             Worksheet sh = book.Worksheets[0];
-            int r = sh.LastRow + 1;
 
-            sh.Range[r, 1].Value = name;
-            sh.Range[r, 2].Value = gender;
-            sh.Range[r, 3].Value = hobbies;
-            sh.Range[r, 4].Value = address;
-            sh.Range[r, 5].Value = favcolor;
-            sh.Range[r, 6].Value = email;
-            sh.Range[r, 7].Value = birthdate;
-            sh.Range[r, 8].Value = age;
-            sh.Range[r, 9].Value = course;
-            sh.Range[r, 10].Value = saying;
-            sh.Range[r, 11].Value = username;
-            sh.Range[r, 12].Value = password;
-            sh.Range[r, 13].Value = "1";
-            sh.Range[r, 14].Value = profilePicture;
+            // Search for the existing row based on username (assuming it's in column 11)
+            bool isUpdated = false;
 
-            // ✅ Proper save
-            workbook.SaveToFile(path, ExcelVersion.Version2016);
+            for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
+            {
+                if (sh.Range[i, 11].Value.ToString() == username) // Username column
+                {
+                    // If record is found, update it
+                    sh.Range[i, 1].Value = name;
+                    sh.Range[i, 2].Value = gender;
+                    sh.Range[i, 3].Value = hobbies;
+                    sh.Range[i, 4].Value = address;
+                    sh.Range[i, 5].Value = favcolor;
+                    sh.Range[i, 6].Value = email;
+                    sh.Range[i, 7].Value = birthdate;
+                    sh.Range[i, 8].Value = age;
+                    sh.Range[i, 9].Value = course;
+                    sh.Range[i, 10].Value = saying;
+                    sh.Range[i, 12].Value = password;
+                    sh.Range[i, 13].Value = "1"; // active flag
+                    sh.Range[i, 14].Value = profilePicture; // Profile picture path
 
-            MessageBox.Show("Successfully updated!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    isUpdated = true;
+                    break;
+                }
+            }
+            // If no existing record was found, add new record
+            if (!isUpdated)
+            {
+                int newRow = sh.LastRow + 1;
+                sh.Range[newRow, 1].Value = name;
+                sh.Range[newRow, 2].Value = gender;
+                sh.Range[newRow, 3].Value = hobbies;
+                sh.Range[newRow, 4].Value = address;
+                sh.Range[newRow, 5].Value = favcolor;
+                sh.Range[newRow, 6].Value = email;
+                sh.Range[newRow, 7].Value = birthdate;
+                sh.Range[newRow, 8].Value = age;
+                sh.Range[newRow, 9].Value = course;
+                sh.Range[newRow, 10].Value = saying;
+                sh.Range[newRow, 11].Value = username;
+                sh.Range[newRow, 12].Value = password;
+                sh.Range[newRow, 13].Value = "1"; // active flag
+                sh.Range[newRow, 14].Value = profilePicture; // Profile picture path
+            }
+            // Save changes to Excel
+            book.SaveToFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx", ExcelVersion.Version2016);
+
+            MessageBox.Show(isUpdated ? "Successfully updated!" : "Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Reset form
             btnADD.Visible = true;
@@ -420,6 +436,7 @@ namespace Villahermosaaa
         {
 
         }
+        
     }
 }
 
