@@ -17,6 +17,8 @@ namespace Villahermosaaa
 {
     public partial class Form2 : Form
     {
+        internal object txtName;
+
         public Form2()
         {
             InitializeComponent();
@@ -218,6 +220,16 @@ namespace Villahermosaaa
         private void btnCLOSE_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

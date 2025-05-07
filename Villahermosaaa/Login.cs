@@ -17,20 +17,17 @@ namespace Villahermosaaa
     public partial class Login : Form
     {
         Mylogs logs = new Mylogs();
+
         public Login()
         {
             InitializeComponent();
         }
-
+       
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //Dynamic path
+            //load excel file
             Workbook book = new Workbook();
-            string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-
-            string folder = "book1";
-            string file = "book1.xlsx";
-            string path = Path.Combine(Filelocation, folder, file);
+            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sheet = book.Worksheets[0];
             bool loginSuccess = false;
 
@@ -38,51 +35,54 @@ namespace Villahermosaaa
             {
                 string storedUsername = sheet.Range[i, 11].Value?.Trim();
                 string storedPassword = sheet.Range[i, 12].Value?.Trim();
+                string accountStatus = sheet.Range[i, 13].Value?.Trim();
 
                 if (storedUsername == txtUsername.Text.Trim() && storedPassword == txtPassword.Text.Trim())
                 {
-                    string profilePath = sheet.Range[i, 14].Value;
-                    string name = txtUsername.Text.Trim();
+                    if (accountStatus == "0")
+                    {
+                        MessageBox.Show("Your account is inactive. Login Failed", "Account Inactive", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        loginSuccess = true;
+                        txtUsername.Clear(); txtPassword.Clear();
+                        break;
+                    }
+
+                    string profilePath = sheet.Range[i, 14].Text;
+                    string name = storedUsername;
 
                     MessageBox.Show("Login successful", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
 
-                    this.Hide();
-                    Dashboard dashboard = new Dashboard(name, profilePath); //  Now it matches your constructor
+                    Dashboard dashboard = new Dashboard(name, profilePath);
                     dashboard.ShowDialog();
                     loginSuccess = true;
                     this.Close();
                     break;
-
                 }
+            }
 
-            }
-            if (!loginSuccess)
-            {
-                MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             if (!loginSuccess)
             {
                 // Validate username and password fields
                 if (string.IsNullOrWhiteSpace(txtPassword.Text) && string.IsNullOrWhiteSpace(txtUsername.Text))
                 {
-                    MessageBox.Show("Username and password cannot be empty.");
+                    MessageBox.Show("Username and password cannot be empty.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (string.IsNullOrWhiteSpace(txtUsername.Text))
                 {
-                    MessageBox.Show("Username cannot be empty.");
+                    MessageBox.Show("Username cannot be empty.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (string.IsNullOrWhiteSpace(txtPassword.Text))
                 {
-                    MessageBox.Show("Password cannot be empty.");
+                    MessageBox.Show("Password cannot be empty.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

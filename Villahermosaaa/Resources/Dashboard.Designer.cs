@@ -148,7 +148,7 @@
             this.lblDashboard.BackColor = System.Drawing.Color.Transparent;
             this.lblDashboard.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDashboard.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDashboard.Location = new System.Drawing.Point(53, 11);
+            this.lblDashboard.Location = new System.Drawing.Point(106, 23);
             this.lblDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDashboard.Name = "lblDashboard";
             this.lblDashboard.Size = new System.Drawing.Size(175, 35);
@@ -213,7 +213,7 @@
             this.lblInactive.BackColor = System.Drawing.Color.Transparent;
             this.lblInactive.Font = new System.Drawing.Font("Century Schoolbook", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInactive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInactive.Location = new System.Drawing.Point(525, 135);
+            this.lblInactive.Location = new System.Drawing.Point(515, 135);
             this.lblInactive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInactive.Name = "lblInactive";
             this.lblInactive.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -607,6 +607,7 @@
             this.btndashboard.TabIndex = 55;
             this.btndashboard.Text = "Dashboard";
             this.btndashboard.UseVisualStyleBackColor = false;
+            this.btndashboard.Click += new System.EventHandler(this.btndashboard_Click);
             // 
             // mainpanel
             // 
@@ -642,10 +643,10 @@
             this.mainpanel.Controls.Add(this.lblActiveStudents);
             this.mainpanel.Controls.Add(this.lblActive);
             this.mainpanel.Controls.Add(this.lblDashboard);
-            this.mainpanel.Location = new System.Drawing.Point(312, 9);
+            this.mainpanel.Location = new System.Drawing.Point(297, 1);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(777, 682);
+            this.mainpanel.Size = new System.Drawing.Size(796, 690);
             this.mainpanel.TabIndex = 56;
             // 
             // sidepanel
@@ -671,7 +672,7 @@
             this.BackColor = System.Drawing.Color.Plum;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1093, 694);
+            this.ClientSize = new System.Drawing.Size(1092, 694);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.sidepanel);
             this.DoubleBuffered = true;

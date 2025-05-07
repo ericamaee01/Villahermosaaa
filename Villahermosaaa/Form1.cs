@@ -55,20 +55,16 @@ namespace Villahermosaaa
                 return;
             }
 
-            if (radFemale.Checked)
-                gender = radFemale.Text.Trim();
-            else if (radMale.Checked)
-                gender = radMale.Text.Trim();
-
+            gender = radFemale.Checked ? radFemale.Text : radMale.Checked ? radMale.Text : "";
             if (string.IsNullOrEmpty(gender))
             {
                 MessageBox.Show("Please select a gender.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (cbCooking.Checked) hobbies += cbCooking.Text.Trim() + ", ";
-            if (cbSinging.Checked) hobbies += cbSinging.Text.Trim() + ", ";
-            if (cbDancing.Checked) hobbies += cbDancing.Text.Trim() + ", ";
+            if (cbCooking.Checked) hobbies += cbCooking.Text + ", ";
+            if (cbSinging.Checked) hobbies += cbSinging.Text + ", ";
+            if (cbDancing.Checked) hobbies += cbDancing.Text + ", ";
             hobbies = hobbies.TrimEnd(',', ' ');
 
             if (string.IsNullOrEmpty(hobbies))
@@ -146,20 +142,30 @@ namespace Villahermosaaa
                 txtProfilePicture.Focus();
                 return;
             }
+            Workbook checkBook = new Workbook();
+            checkBook.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            Worksheet checkSheet = checkBook.Worksheets[0];
 
-            i++;
+            for (int i = 2; i <= checkSheet.LastRow; i++) // skip header
+            {
+                string existingUsername = checkSheet.Range[i, 11].Value?.Trim();
+                string existingPassword = checkSheet.Range[i, 12].Value?.Trim();
 
+                if (string.Equals(existingUsername, username, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(existingPassword, password, StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("A user with the same username and password already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            //Insert data into form2
             Form2 form2 = new Form2();
             form2.insertdata(name, gender, hobbies, favcolor, address, email, birthdate, age, course, saying, username, password, "1", profilePicture);
 
+            // Save to Excel
             Workbook book = new Workbook();
-            string Filelocation = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-
-            string folder = "Book1";
-            string file = "Book1.xlsx";
-            string path = Path.Combine(Filelocation, folder, file);
-            Workbook workbook = new Workbook();
-            workbook.LoadFromFile(path);
+            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sh = book.Worksheets[0];
             int r = sh.LastRow + 1;
 
@@ -175,13 +181,11 @@ namespace Villahermosaaa
             sh.Range[r, 10].Value = saying;
             sh.Range[r, 11].Value = username;
             sh.Range[r, 12].Value = password;
-            sh.Range[r, 13].Value = "1";
-            sh.Range[r, 14].Value = profilePicture;
+            sh.Range[r, 13].Value = "1"; // active flag
+            sh.Range[r, 14].Value = profilePicture; // picture path
 
-            // ✅ Proper save
-            workbook.SaveToFile(path, ExcelVersion.Version2016);
+            book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book)\\book1.xlsx", ExcelVersion.Version2016);
 
-            DataTable dt = sh.ExportDataTable();
             MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Reset form
@@ -201,6 +205,7 @@ namespace Villahermosaaa
 
             txtAge.ReadOnly = true;
             txtName.Focus();
+
         }
 
         private void btnDISPLAY_Click(object sender, EventArgs e)
@@ -331,9 +336,26 @@ namespace Villahermosaaa
                 return;
             }
 
+            Workbook checkBook = new Workbook();
+            checkBook.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            Worksheet checkSheet = checkBook.Worksheets[0];
+
+            for (int i = 2; i <= checkSheet.LastRow; i++) // skip header
+            {
+                string existingUsername = checkSheet.Range[i, 11].Value?.Trim();
+                string existingPassword = checkSheet.Range[i, 12].Value?.Trim();
+
+                if (string.Equals(existingUsername, username, StringComparison.OrdinalIgnoreCase) &&
+                    string.Equals(existingPassword, password, StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("A user with the same username and password already exists.", "Duplicate Entry", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
             // Load the Excel file to update
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx");
+            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sh = book.Worksheets[0];
 
             // Search for the existing row based on username (assuming it's in column 11)
@@ -362,6 +384,7 @@ namespace Villahermosaaa
                     break;
                 }
             }
+
             // If no existing record was found, add new record
             if (!isUpdated)
             {
@@ -381,8 +404,9 @@ namespace Villahermosaaa
                 sh.Range[newRow, 13].Value = "1"; // active flag
                 sh.Range[newRow, 14].Value = profilePicture; // Profile picture path
             }
+
             // Save changes to Excel
-            book.SaveToFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx", ExcelVersion.Version2016);
+            book.SaveToFile("C:\\Users\\ninel\\Downloads\\newwwww\\ninel(V2)\\Book1.xlsx", ExcelVersion.Version2016);
 
             MessageBox.Show(isUpdated ? "Successfully updated!" : "Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

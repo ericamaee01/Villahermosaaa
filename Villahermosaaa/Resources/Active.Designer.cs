@@ -29,7 +29,60 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Active));
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnDELETE = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(161, 147);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(296, 27);
+            this.txtSearch.TabIndex = 11;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.HotPink;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(62, 145);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(92, 29);
+            this.btnSearch.TabIndex = 10;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnDELETE
+            // 
+            this.btnDELETE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDELETE.ForeColor = System.Drawing.Color.Red;
+            this.btnDELETE.Location = new System.Drawing.Point(62, 505);
+            this.btnDELETE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDELETE.Name = "btnDELETE";
+            this.btnDELETE.Size = new System.Drawing.Size(186, 33);
+            this.btnDELETE.TabIndex = 9;
+            this.btnDELETE.Text = "DELETE";
+            this.btnDELETE.UseVisualStyleBackColor = true;
+            this.btnDELETE.Click += new System.EventHandler(this.btnDELETE_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LavenderBlush;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(59, 199);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(687, 282);
+            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // Active
             // 
@@ -38,13 +91,24 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(806, 575);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnDELETE);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Active";
             this.Text = "Active";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        public System.Windows.Forms.TextBox txtSearch;
+        public System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnDELETE;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -123,12 +123,6 @@
     <Compile Include="Resources\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Resources\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Resources\home design.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,9 +165,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\home design.resx">
       <DependentUpon>home design.cs</DependentUpon>

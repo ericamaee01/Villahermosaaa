@@ -20,7 +20,7 @@ namespace Villahermosaaa.Resources
         {
             
             InitializeComponent();
-            lblName.Text = "Welcome!, " + name;
+            lblName.Text = "Welcome! " + name;
 
             try
             {
@@ -35,7 +35,7 @@ namespace Villahermosaaa.Resources
 
             // Load the Excel file to count active students
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\Downloads\\book1.xlsx");
+            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sh = book.Worksheets[0];
 
             int activeStudentCount = 0;
@@ -239,6 +239,11 @@ namespace Villahermosaaa.Resources
         private void btnLogs_Click(object sender, EventArgs e)
         {
             loadform(new Logs());
+        }
+
+        private void btndashboard_Click(object sender, EventArgs e)
+        {
+            loadform(new home());
         }
     }
 }
