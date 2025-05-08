@@ -174,6 +174,11 @@ namespace Villahermosaaa.Resources
         {
 
         }
+
+        private void lblDancing_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -16,5 +16,10 @@ namespace Villahermosaaa.Resources
         {
             InitializeComponent();
         }
+
+        private void btnDELETE_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

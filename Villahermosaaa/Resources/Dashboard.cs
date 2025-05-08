@@ -163,25 +163,25 @@ namespace Villahermosaaa.Resources
                 }
 
             }
-            int bsedCourseCount = 0;
+            int bsbaCourseCount = 0;
 
             for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
             {
                 if (sh.Range[i, 9].Value.ToString() == "BSED")
                 {
-                    bsedCourseCount++;
-                    BSED.Text = bsedCourseCount.ToString();
+                    bsbaCourseCount++;
+                    lblBSBA.Text = bsbaCourseCount.ToString();
                 }
 
             }
-            int bsbaCourseCount = 0;
+            int bsedCourseCount = 0;
 
             for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
             {
                 if (sh.Range[i, 9].Value.ToString() == "BSBA")
                 {
-                    bsbaCourseCount++;
-                    BSBA.Text = bsbaCourseCount.ToString();
+                    bsedCourseCount++;
+                    lblBSED.Text = bsbaCourseCount.ToString();
                 }
             }
         }
@@ -244,6 +244,16 @@ namespace Villahermosaaa.Resources
         private void btndashboard_Click(object sender, EventArgs e)
         {
             loadform(new home());
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainpanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

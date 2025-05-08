@@ -64,7 +64,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogout.Location = new System.Drawing.Point(85, 591);
+            this.btnLogout.Location = new System.Drawing.Point(85, 678);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(173, 42);
@@ -81,7 +81,7 @@
             this.btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogs.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogs.Location = new System.Drawing.Point(85, 519);
+            this.btnLogs.Location = new System.Drawing.Point(85, 587);
             this.btnLogs.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogs.Name = "btnLogs";
             this.btnLogs.Size = new System.Drawing.Size(173, 42);
@@ -98,7 +98,7 @@
             this.btnInactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInactive.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInactive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInactive.Location = new System.Drawing.Point(85, 447);
+            this.btnInactive.Location = new System.Drawing.Point(85, 492);
             this.btnInactive.Margin = new System.Windows.Forms.Padding(4);
             this.btnInactive.Name = "btnInactive";
             this.btnInactive.Size = new System.Drawing.Size(173, 42);
@@ -115,7 +115,7 @@
             this.btnActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActive.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnActive.Location = new System.Drawing.Point(85, 371);
+            this.btnActive.Location = new System.Drawing.Point(85, 401);
             this.btnActive.Margin = new System.Windows.Forms.Padding(4);
             this.btnActive.Name = "btnActive";
             this.btnActive.Size = new System.Drawing.Size(173, 42);
@@ -141,7 +141,7 @@
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(12, 239);
+            this.lblName.Location = new System.Drawing.Point(12, 245);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(94, 29);
             this.lblName.TabIndex = 3;
@@ -153,7 +153,7 @@
             this.btndashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndashboard.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndashboard.ForeColor = System.Drawing.Color.Black;
-            this.btndashboard.Location = new System.Drawing.Point(85, 298);
+            this.btndashboard.Location = new System.Drawing.Point(85, 322);
             this.btndashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndashboard.Name = "btndashboard";
             this.btndashboard.Size = new System.Drawing.Size(173, 42);
@@ -173,10 +173,11 @@
             this.sidepanel.Controls.Add(this.btnLogs);
             this.sidepanel.Controls.Add(this.btnInactive);
             this.sidepanel.Controls.Add(this.btnLogout);
-            this.sidepanel.Location = new System.Drawing.Point(0, 1);
+            this.sidepanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidepanel.Location = new System.Drawing.Point(0, 0);
             this.sidepanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sidepanel.Name = "sidepanel";
-            this.sidepanel.Size = new System.Drawing.Size(294, 737);
+            this.sidepanel.Size = new System.Drawing.Size(304, 753);
             this.sidepanel.TabIndex = 57;
             // 
             // lblActive
@@ -185,7 +186,7 @@
             this.lblActive.BackColor = System.Drawing.Color.Transparent;
             this.lblActive.Font = new System.Drawing.Font("Century Schoolbook", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblActive.Location = new System.Drawing.Point(155, 140);
+            this.lblActive.Location = new System.Drawing.Point(139, 179);
             this.lblActive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblActive.Name = "lblActive";
             this.lblActive.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -200,7 +201,7 @@
             this.lblInactive.BackColor = System.Drawing.Color.Transparent;
             this.lblInactive.Font = new System.Drawing.Font("Century Schoolbook", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInactive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInactive.Location = new System.Drawing.Point(505, 140);
+            this.lblInactive.Location = new System.Drawing.Point(513, 179);
             this.lblInactive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInactive.Name = "lblInactive";
             this.lblInactive.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -215,7 +216,7 @@
             this.lblMale.BackColor = System.Drawing.Color.Transparent;
             this.lblMale.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblMale.Location = new System.Drawing.Point(277, 386);
+            this.lblMale.Location = new System.Drawing.Point(259, 435);
             this.lblMale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMale.Name = "lblMale";
             this.lblMale.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -230,7 +231,7 @@
             this.lblFemale.BackColor = System.Drawing.Color.Transparent;
             this.lblFemale.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFemale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFemale.Location = new System.Drawing.Point(277, 343);
+            this.lblFemale.Location = new System.Drawing.Point(259, 392);
             this.lblFemale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFemale.Name = "lblFemale";
             this.lblFemale.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -245,7 +246,7 @@
             this.lblDancing.BackColor = System.Drawing.Color.Transparent;
             this.lblDancing.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDancing.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDancing.Location = new System.Drawing.Point(277, 601);
+            this.lblDancing.Location = new System.Drawing.Point(258, 656);
             this.lblDancing.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDancing.Name = "lblDancing";
             this.lblDancing.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -260,7 +261,7 @@
             this.lblSinging.BackColor = System.Drawing.Color.Transparent;
             this.lblSinging.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinging.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSinging.Location = new System.Drawing.Point(277, 565);
+            this.lblSinging.Location = new System.Drawing.Point(258, 629);
             this.lblSinging.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSinging.Name = "lblSinging";
             this.lblSinging.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -275,7 +276,7 @@
             this.lblCooking.BackColor = System.Drawing.Color.Transparent;
             this.lblCooking.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCooking.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCooking.Location = new System.Drawing.Point(277, 532);
+            this.lblCooking.Location = new System.Drawing.Point(258, 601);
             this.lblCooking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCooking.Name = "lblCooking";
             this.lblCooking.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -290,7 +291,7 @@
             this.lblBlack.BackColor = System.Drawing.Color.Transparent;
             this.lblBlack.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBlack.Location = new System.Drawing.Point(633, 328);
+            this.lblBlack.Location = new System.Drawing.Point(633, 382);
             this.lblBlack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBlack.Name = "lblBlack";
             this.lblBlack.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -305,7 +306,7 @@
             this.lblPink.BackColor = System.Drawing.Color.Transparent;
             this.lblPink.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPink.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPink.Location = new System.Drawing.Point(633, 364);
+            this.lblPink.Location = new System.Drawing.Point(633, 413);
             this.lblPink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPink.Name = "lblPink";
             this.lblPink.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -320,7 +321,7 @@
             this.lblPurple.BackColor = System.Drawing.Color.Transparent;
             this.lblPurple.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPurple.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPurple.Location = new System.Drawing.Point(633, 404);
+            this.lblPurple.Location = new System.Drawing.Point(633, 445);
             this.lblPurple.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPurple.Name = "lblPurple";
             this.lblPurple.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -335,7 +336,7 @@
             this.lblBSIT.BackColor = System.Drawing.Color.Transparent;
             this.lblBSIT.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBSIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBSIT.Location = new System.Drawing.Point(633, 525);
+            this.lblBSIT.Location = new System.Drawing.Point(633, 598);
             this.lblBSIT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBSIT.Name = "lblBSIT";
             this.lblBSIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -350,7 +351,7 @@
             this.lblBSBA.BackColor = System.Drawing.Color.Transparent;
             this.lblBSBA.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBSBA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBSBA.Location = new System.Drawing.Point(633, 558);
+            this.lblBSBA.Location = new System.Drawing.Point(633, 625);
             this.lblBSBA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBSBA.Name = "lblBSBA";
             this.lblBSBA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -365,7 +366,7 @@
             this.lblBSED.BackColor = System.Drawing.Color.Transparent;
             this.lblBSED.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBSED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBSED.Location = new System.Drawing.Point(633, 594);
+            this.lblBSED.Location = new System.Drawing.Point(633, 657);
             this.lblBSED.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBSED.Name = "lblBSED";
             this.lblBSED.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -391,19 +392,21 @@
             this.mainpanel.Controls.Add(this.lblMale);
             this.mainpanel.Controls.Add(this.lblInactive);
             this.mainpanel.Controls.Add(this.lblActive);
-            this.mainpanel.Location = new System.Drawing.Point(292, 1);
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(304, 0);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(768, 666);
+            this.mainpanel.Size = new System.Drawing.Size(750, 753);
             this.mainpanel.TabIndex = 56;
+            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Plum;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1061, 668);
+            this.ClientSize = new System.Drawing.Size(1054, 753);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.sidepanel);
             this.DoubleBuffered = true;
@@ -411,6 +414,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidepanel.ResumeLayout(false);
             this.sidepanel.PerformLayout();

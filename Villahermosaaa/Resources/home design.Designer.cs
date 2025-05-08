@@ -50,7 +50,7 @@
             this.lblBSED.BackColor = System.Drawing.Color.Transparent;
             this.lblBSED.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBSED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBSED.Location = new System.Drawing.Point(627, 592);
+            this.lblBSED.Location = new System.Drawing.Point(633, 657);
             this.lblBSED.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBSED.Name = "lblBSED";
             this.lblBSED.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -65,7 +65,7 @@
             this.lblBSBA.BackColor = System.Drawing.Color.Transparent;
             this.lblBSBA.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBSBA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBSBA.Location = new System.Drawing.Point(627, 556);
+            this.lblBSBA.Location = new System.Drawing.Point(633, 625);
             this.lblBSBA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBSBA.Name = "lblBSBA";
             this.lblBSBA.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -80,7 +80,7 @@
             this.lblBSIT.BackColor = System.Drawing.Color.Transparent;
             this.lblBSIT.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBSIT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBSIT.Location = new System.Drawing.Point(627, 523);
+            this.lblBSIT.Location = new System.Drawing.Point(633, 598);
             this.lblBSIT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBSIT.Name = "lblBSIT";
             this.lblBSIT.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -95,7 +95,7 @@
             this.lblPurple.BackColor = System.Drawing.Color.Transparent;
             this.lblPurple.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPurple.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPurple.Location = new System.Drawing.Point(627, 402);
+            this.lblPurple.Location = new System.Drawing.Point(633, 445);
             this.lblPurple.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPurple.Name = "lblPurple";
             this.lblPurple.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -110,7 +110,7 @@
             this.lblPink.BackColor = System.Drawing.Color.Transparent;
             this.lblPink.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPink.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPink.Location = new System.Drawing.Point(627, 362);
+            this.lblPink.Location = new System.Drawing.Point(633, 413);
             this.lblPink.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPink.Name = "lblPink";
             this.lblPink.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -125,7 +125,7 @@
             this.lblBlack.BackColor = System.Drawing.Color.Transparent;
             this.lblBlack.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBlack.Location = new System.Drawing.Point(627, 326);
+            this.lblBlack.Location = new System.Drawing.Point(633, 382);
             this.lblBlack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBlack.Name = "lblBlack";
             this.lblBlack.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -140,7 +140,7 @@
             this.lblCooking.BackColor = System.Drawing.Color.Transparent;
             this.lblCooking.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCooking.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCooking.Location = new System.Drawing.Point(271, 530);
+            this.lblCooking.Location = new System.Drawing.Point(258, 601);
             this.lblCooking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCooking.Name = "lblCooking";
             this.lblCooking.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -155,7 +155,7 @@
             this.lblSinging.BackColor = System.Drawing.Color.Transparent;
             this.lblSinging.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinging.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblSinging.Location = new System.Drawing.Point(271, 563);
+            this.lblSinging.Location = new System.Drawing.Point(258, 629);
             this.lblSinging.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSinging.Name = "lblSinging";
             this.lblSinging.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -170,7 +170,7 @@
             this.lblDancing.BackColor = System.Drawing.Color.Transparent;
             this.lblDancing.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDancing.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDancing.Location = new System.Drawing.Point(271, 599);
+            this.lblDancing.Location = new System.Drawing.Point(258, 656);
             this.lblDancing.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDancing.Name = "lblDancing";
             this.lblDancing.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -178,6 +178,7 @@
             this.lblDancing.TabIndex = 56;
             this.lblDancing.Text = "00";
             this.lblDancing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDancing.Click += new System.EventHandler(this.lblDancing_Click);
             // 
             // lblFemale
             // 
@@ -185,7 +186,7 @@
             this.lblFemale.BackColor = System.Drawing.Color.Transparent;
             this.lblFemale.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFemale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblFemale.Location = new System.Drawing.Point(271, 341);
+            this.lblFemale.Location = new System.Drawing.Point(259, 392);
             this.lblFemale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFemale.Name = "lblFemale";
             this.lblFemale.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -200,7 +201,7 @@
             this.lblMale.BackColor = System.Drawing.Color.Transparent;
             this.lblMale.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMale.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblMale.Location = new System.Drawing.Point(271, 384);
+            this.lblMale.Location = new System.Drawing.Point(259, 435);
             this.lblMale.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMale.Name = "lblMale";
             this.lblMale.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -215,7 +216,7 @@
             this.lblInactive.BackColor = System.Drawing.Color.Transparent;
             this.lblInactive.Font = new System.Drawing.Font("Century Schoolbook", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInactive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblInactive.Location = new System.Drawing.Point(499, 138);
+            this.lblInactive.Location = new System.Drawing.Point(513, 179);
             this.lblInactive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInactive.Name = "lblInactive";
             this.lblInactive.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -230,7 +231,7 @@
             this.lblActive.BackColor = System.Drawing.Color.Transparent;
             this.lblActive.Font = new System.Drawing.Font("Century Schoolbook", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblActive.Location = new System.Drawing.Point(149, 138);
+            this.lblActive.Location = new System.Drawing.Point(139, 179);
             this.lblActive.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblActive.Name = "lblActive";
             this.lblActive.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -244,7 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(792, 690);
+            this.ClientSize = new System.Drawing.Size(752, 757);
             this.Controls.Add(this.lblBSED);
             this.Controls.Add(this.lblBSBA);
             this.Controls.Add(this.lblBSIT);
