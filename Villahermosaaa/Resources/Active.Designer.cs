@@ -38,7 +38,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(161, 147);
+            this.txtSearch.Location = new System.Drawing.Point(140, 137);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
@@ -50,7 +50,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.HotPink;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(62, 145);
+            this.btnSearch.Location = new System.Drawing.Point(41, 135);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 29);
@@ -63,7 +63,7 @@
             // 
             this.btnDELETE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDELETE.ForeColor = System.Drawing.Color.Red;
-            this.btnDELETE.Location = new System.Drawing.Point(62, 505);
+            this.btnDELETE.Location = new System.Drawing.Point(41, 495);
             this.btnDELETE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDELETE.Name = "btnDELETE";
             this.btnDELETE.Size = new System.Drawing.Size(186, 33);
@@ -76,7 +76,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 199);
+            this.dataGridView1.Location = new System.Drawing.Point(38, 189);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -90,7 +90,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(806, 575);
+            this.ClientSize = new System.Drawing.Size(768, 666);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDELETE);

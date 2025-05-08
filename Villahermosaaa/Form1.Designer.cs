@@ -255,7 +255,7 @@
             // 
             this.btnUPDATE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUPDATE.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnUPDATE.Location = new System.Drawing.Point(119, 490);
+            this.btnUPDATE.Location = new System.Drawing.Point(232, 474);
             this.btnUPDATE.Margin = new System.Windows.Forms.Padding(4);
             this.btnUPDATE.Name = "btnUPDATE";
             this.btnUPDATE.Size = new System.Drawing.Size(165, 49);
