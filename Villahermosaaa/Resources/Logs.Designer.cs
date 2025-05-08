@@ -31,9 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Logs));
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnDELETE = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -57,30 +56,18 @@
             this.btnSearch.TabIndex = 14;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // btnDELETE
+            // dataGridView2
             // 
-            this.btnDELETE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDELETE.ForeColor = System.Drawing.Color.Red;
-            this.btnDELETE.Location = new System.Drawing.Point(63, 479);
-            this.btnDELETE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDELETE.Name = "btnDELETE";
-            this.btnDELETE.Size = new System.Drawing.Size(186, 33);
-            this.btnDELETE.TabIndex = 13;
-            this.btnDELETE.Text = "DELETE";
-            this.btnDELETE.UseVisualStyleBackColor = true;
-            this.btnDELETE.Click += new System.EventHandler(this.btnDELETE_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LavenderBlush;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(60, 173);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(687, 282);
-            this.dataGridView1.TabIndex = 12;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.LavenderBlush;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(60, 173);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(687, 282);
+            this.dataGridView2.TabIndex = 12;
             // 
             // Logs
             // 
@@ -90,12 +77,11 @@
             this.ClientSize = new System.Drawing.Size(811, 563);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnDELETE);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Logs";
             this.Text = "Logs";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,7 +91,6 @@
 
         public System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnDELETE;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView2;
     }
 }

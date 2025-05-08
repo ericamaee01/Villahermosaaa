@@ -53,6 +53,8 @@ namespace Villahermosaaa
                     MessageBox.Show("Login successful", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
 
+                    logs.insertLogs(storedUsername, "Successfully logged in!");
+
                     Dashboard dashboard = new Dashboard(name, profilePath);
                     dashboard.ShowDialog();
                     //Form1 form1 = new Form1();

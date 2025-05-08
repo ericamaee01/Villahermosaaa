@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Villahermosaaa.Resources;
 
 namespace Villahermosaaa
 {
@@ -19,11 +20,13 @@ namespace Villahermosaaa
 
         string[] student = new string[5];
         int i = 0;
+        private string currentUserName;
 
 
-        public Form1()
+        public Form1(string username)
         {
             InitializeComponent();
+
         }
 
         private void btnADD_Click(object sender, EventArgs e)
@@ -160,7 +163,7 @@ namespace Villahermosaaa
             }
 
             //Insert data into form2
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(currentUserName);
             form2.insertdata(name, gender, hobbies, favcolor, address, email, birthdate, age, course, saying, username, password, "1", profilePicture);
 
             // Save to Excel
@@ -184,9 +187,13 @@ namespace Villahermosaaa
             sh.Range[r, 13].Value = "1"; // active flag
             sh.Range[r, 14].Value = profilePicture; // picture path
 
-            book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book)\\book1.xlsx", ExcelVersion.Version2016);
+            book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx", ExcelVersion.Version2016);
 
             MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            Mylogs logs = new Mylogs();
+            logs.insertLogs(currentUserName, $"Added new user: {name}");
 
             // Reset form
             btnADD.Visible = true;
@@ -212,7 +219,7 @@ namespace Villahermosaaa
         {
             if (form2 == null || form2.IsDisposed)
             {
-                form2 = new Form2();
+                form2 = new Form2(currentUserName);
             }
             form2.Show();
             form2.BringToFront();
@@ -406,9 +413,13 @@ namespace Villahermosaaa
             }
 
             // Save changes to Excel
-            book.SaveToFile("C:\\Users\\ninel\\Downloads\\newwwww\\ninel(V2)\\Book1.xlsx", ExcelVersion.Version2016);
+            book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx", ExcelVersion.Version2016);
 
             MessageBox.Show(isUpdated ? "Successfully updated!" : "Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Mylogs logs = new Mylogs();
+            logs.insertLogs(currentUserName, "Updated a student");
+
 
             // Reset form
             btnADD.Visible = true;

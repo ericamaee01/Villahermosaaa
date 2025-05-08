@@ -32,8 +32,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDELETE = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -57,6 +57,7 @@
             this.btnSearch.TabIndex = 14;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDELETE
             // 
@@ -71,16 +72,18 @@
             this.btnDELETE.UseVisualStyleBackColor = true;
             this.btnDELETE.Click += new System.EventHandler(this.btnDELETE_Click);
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LavenderBlush;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 183);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(687, 282);
-            this.dataGridView1.TabIndex = 12;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.LavenderBlush;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(53, 183);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.Size = new System.Drawing.Size(687, 282);
+            this.dataGridView2.TabIndex = 12;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // Inactive
             // 
@@ -91,11 +94,11 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDELETE);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Inactive";
             this.Text = "Inactive";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,6 +109,6 @@
         public System.Windows.Forms.TextBox txtSearch;
         public System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDELETE;
-        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView2;
     }
 }

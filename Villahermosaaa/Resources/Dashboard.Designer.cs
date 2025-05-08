@@ -396,17 +396,16 @@
             this.mainpanel.Location = new System.Drawing.Point(304, 0);
             this.mainpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(750, 753);
+            this.mainpanel.Size = new System.Drawing.Size(898, 753);
             this.mainpanel.TabIndex = 56;
-            this.mainpanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainpanel_Paint);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1054, 753);
+            this.ClientSize = new System.Drawing.Size(1202, 753);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.sidepanel);
             this.DoubleBuffered = true;
@@ -414,7 +413,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
-            this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sidepanel.ResumeLayout(false);
             this.sidepanel.PerformLayout();

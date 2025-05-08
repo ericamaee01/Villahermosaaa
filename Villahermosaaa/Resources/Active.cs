@@ -13,9 +13,17 @@ namespace Villahermosaaa.Resources
 {
     public partial class Active : Form
     {
-        public Active()
+        private string currentUserName;
+        public Active(string userName)
         {
             InitializeComponent();
+            currentUserName = userName;
+
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.BackColor = Color.White;
+
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.LightPink;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
         }
 
         private void btnDELETE_Click(object sender, EventArgs e)
@@ -44,10 +52,14 @@ namespace Villahermosaaa.Resources
                     }
                 }
 
+
                 // Save changes
-                book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book.xlsx");
+                book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
 
                 MessageBox.Show("Deleted. Status marked as '0'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Mylogs logs = new Mylogs();
+                logs.insertLogs(currentUserName, "Deleted an active student");
             }
             else
             {
@@ -57,79 +69,10 @@ namespace Villahermosaaa.Resources
 
         private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int r = dataGridView1.CurrentCell.RowIndex;
-
-            // Check if Form1 is already open
-            Form1 f1 = Application.OpenForms["Form1"] as Form1;
-
-            // Create instance if not open
-            if (f1 == null)
-            {
-                f1 = new Form1();
-                f1.Show();
-            }
-
-            // Populate Form2 with the data from the selected row in Form1's DataGridView
-            if (dataGridView1.Rows[r].Cells[0].Value != null)
-                f1.txtName.Text = dataGridView1.Rows[r].Cells[0].Value.ToString();
-
-            // Gender
-            string gender = dataGridView1.Rows[r].Cells[1].Value.ToString();
-            f1.radMale.Checked = gender == "Male";
-            f1.radFemale.Checked = gender == "Female";
-
-            // Hobbies
-            string hobbies = dataGridView1.Rows[r].Cells[2].Value.ToString();
-            string[] h = hobbies.Split(',');
-            f1.cbCooking.Checked = h.Contains("Dancing");
-            f1.cbSinging.Checked = h.Contains("Singing");
-            f1.cbDancing.Checked = h.Contains("Reading");
-
-            // Address
-            f1.txtAddress.Text = dataGridView1.Rows[r].Cells[3].Value.ToString();
-
-            // Favorite Color
-            f1.cboFavColor.SelectedItem = dataGridView1.Rows[r].Cells[4].Value.ToString();
-
-            // Email
-            f1.txtEmail.Text = dataGridView1.Rows[r].Cells[5].Value.ToString();
-
-            // Birthdate
-            f1.dtpBday.Value = DateTime.TryParse(dataGridView1.Rows[r].Cells[6].Value.ToString(), out DateTime dob) ? dob : DateTime.Now;
-
-            // Age
-            f1.txtAge.Text = dataGridView1.Rows[r].Cells[7].Value.ToString();
-
-            // Course
-            f1.cbocourse.SelectedItem = dataGridView1.Rows[r].Cells[8].Value.ToString();
-
-            // Saying
-            f1.txtSaying.Text = dataGridView1.Rows[r].Cells[9].Value.ToString();
-
-            // Username
-            f1.txtUsername.Text = dataGridView1.Rows[r].Cells[10].Value.ToString();
-
-            // Password
-            f1.txtPassword.Text = dataGridView1.Rows[r].Cells[11].Value.ToString();
-
-            // Profile Picture
-            string picPath = dataGridView1.Rows[r].Cells[13].Value.ToString();
-            if (System.IO.File.Exists(picPath))
-            {
-                f1.txtProfilePicture.Text = picPath;
-            }
-            else
-            {
-                f1.txtProfilePicture.Text = "";
-            }
-
-            // Hide ADD button, show UPDATE button
-            f1.btnADD.Visible = false;
-            f1.btnUPDATE.Visible = true;
+            
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
             dataGridView1.ClearSelection();
             bool itemFound = false;
 
@@ -137,16 +80,19 @@ namespace Villahermosaaa.Resources
             {
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    // Skip new row placeholder in DataGridView
+                    // Skip new row placeholder
                     if (row.IsNewRow) continue;
 
                     if (row.Cells[0].Value != null &&
-                        row.Cells[0].Value.ToString().Equals(txtSearch.Text.Trim(), StringComparison.OrdinalIgnoreCase))
+                        row.Cells[0].Value.ToString().IndexOf(txtSearch.Text.Trim(), StringComparison.OrdinalIgnoreCase) >= 0)
                     {
                         row.Selected = true;
-                        dataGridView1.FirstDisplayedScrollingRowIndex = row.Index; // Scroll to the selected row
+                        // Optional: Scroll to the first match only
+                        if (!itemFound)
+                        {
+                            dataGridView1.FirstDisplayedScrollingRowIndex = row.Index;
+                        }
                         itemFound = true;
-                        break;
                     }
                 }
 
@@ -159,6 +105,68 @@ namespace Villahermosaaa.Resources
             {
                 MessageBox.Show($"An error occurred during search: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnADD_Click(object sender, EventArgs e)
+        {
+            //add form
+
+            Form1 form1 = new Form1(currentUserName);
+            form1.Show();
+        }
+
+        private void dataGridView1_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellMouseDoubleClick_2(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int r = dataGridView1.CurrentCell?.RowIndex ?? -1;
+            if (r < 0 || r >= dataGridView1.Rows.Count) return;
+
+            Form1 f1 = Application.OpenForms["Form1"] as Form1;
+
+            if (f1 == null)
+            {
+                if (string.IsNullOrEmpty(currentUserName)) return;
+                f1 = new Form1(currentUserName);
+                f1.Show();
+            }
+
+            // Check each cell and assign safely
+            var cells = dataGridView1.Rows[r].Cells;
+
+            f1.txtName.Text = cells[0]?.Value?.ToString() ?? "";
+
+            string gender = cells[1]?.Value?.ToString() ?? "";
+            f1.radMale.Checked = gender == "Male";
+            f1.radFemale.Checked = gender == "Female";
+
+            string hobbies = cells[2]?.Value?.ToString() ?? "";
+            string[] h = hobbies.Split(',');
+            f1.cbCooking.Checked = h.Contains("Cooking");
+            f1.cbSinging.Checked = h.Contains("Singing");
+            f1.cbDancing.Checked = h.Contains("Dancing");
+
+            f1.txtAddress.Text = cells[3]?.Value?.ToString() ?? "";
+            f1.cboFavColor.SelectedItem = cells[4]?.Value?.ToString() ?? "";
+            f1.txtEmail.Text = cells[5]?.Value?.ToString() ?? "";
+
+            string birthdate = cells[6]?.Value?.ToString();
+            f1.dtpBday.Value = DateTime.TryParse(birthdate, out DateTime dob) ? dob : DateTime.Now;
+
+            f1.txtAge.Text = cells[7]?.Value?.ToString() ?? "";
+            f1.cbocourse.SelectedItem = cells[8]?.Value?.ToString() ?? "";
+            f1.txtSaying.Text = cells[9]?.Value?.ToString() ?? "";
+            f1.txtUsername.Text = cells[10]?.Value?.ToString() ?? "";
+            f1.txtPassword.Text = cells[11]?.Value?.ToString() ?? "";
+
+            string picPath = cells[13]?.Value?.ToString() ?? "";
+            f1.txtProfilePicture.Text = System.IO.File.Exists(picPath) ? picPath : "";
+
+            f1.btnADD.Visible = false;
+            f1.btnUPDATE.Visible = true;
         }
     }
 
