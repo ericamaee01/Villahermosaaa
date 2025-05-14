@@ -15,7 +15,7 @@ namespace Villahermosaaa
         {
             //logs
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sh = book.Worksheets[1];
             int r = sh.LastRow + 1;
 
@@ -24,7 +24,7 @@ namespace Villahermosaaa
             sh.Range[r, 3].Value = DateTime.Now.ToString("MM/dd/yyyy");
             sh.Range[r, 4].Value = DateTime.Now.ToString("hh:mm:ss tt");
 
-            book.SaveToFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book1.xlsx");
+            book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
         }
     }
     

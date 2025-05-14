@@ -37,7 +37,7 @@ namespace Villahermosaaa.Resources
 
                 // Load the Excel file
                 Workbook book = new Workbook();
-                book.LoadFromFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+                book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
                 Worksheet sheet = book.Worksheets[0];
 
 
@@ -54,7 +54,7 @@ namespace Villahermosaaa.Resources
 
 
                 // Save changes
-                book.SaveToFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+                book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
 
                 MessageBox.Show("Deleted. Status marked as '0'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

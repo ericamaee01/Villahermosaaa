@@ -19,7 +19,7 @@ namespace Villahermosaaa.Resources
 
             // Load the Excel file to count active students
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sh = book.Worksheets[0];
 
             int activeStudentCount = 0;
@@ -74,7 +74,7 @@ namespace Villahermosaaa.Resources
 
             for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
             {
-                if (sh.Range[i, 3].Value.ToString() == "Dancing")
+                if (sh.Range[i, 3].Value.ToString() == "Cooking")
                 {
                     CookingHobbiesCount++;
                     lblCooking.Text = CookingHobbiesCount.ToString();
@@ -96,7 +96,7 @@ namespace Villahermosaaa.Resources
 
             for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
             {
-                if (sh.Range[i, 3].Value.ToString() == "Reading")
+                if (sh.Range[i, 3].Value.ToString() == "Dancing")
                 {
                     DancingHobbiesCount++;
                     lblDancing.Text = DancingHobbiesCount.ToString();
@@ -107,7 +107,7 @@ namespace Villahermosaaa.Resources
 
             for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
             {
-                if (sh.Range[i, 5].Value.ToString() == "Pink")
+                if (sh.Range[i, 5].Value.ToString() == "Black")
                 {
                     BlackColorCount++;
                     lblBlack.Text = BlackColorCount.ToString();
@@ -118,7 +118,7 @@ namespace Villahermosaaa.Resources
 
             for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
             {
-                if (sh.Range[i, 5].Value.ToString() == "Black")
+                if (sh.Range[i, 5].Value.ToString() == "Pink")
                 {
                     PinkColorCount++;
                     lblPink.Text = PinkColorCount.ToString();
@@ -129,7 +129,7 @@ namespace Villahermosaaa.Resources
 
             for (int i = 2; i <= sh.LastRow; i++) // Start from row 2 to skip header
             {
-                if (sh.Range[i, 5].Value.ToString() == "White")
+                if (sh.Range[i, 5].Value.ToString() == "Purple")
                 {
                     PurpleColorCount++;
                     lblPurple.Text = PurpleColorCount.ToString();
@@ -176,6 +176,11 @@ namespace Villahermosaaa.Resources
         }
 
         private void lblDancing_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblActive_Click(object sender, EventArgs e)
         {
 
         }
