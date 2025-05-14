@@ -326,9 +326,9 @@ namespace Villahermosaaa.Resources
             for (int i = 2; i <= sh.LastRow; i++)
             {
                 string color = sh.Range[i, 5].Value.ToString();
-                if (color == "Pink") BlackColorCount++;
-                if (color == "Black") PinkColorCount++;
-                if (color == "White") PurpleColorCount++;
+                if (color == "Black") BlackColorCount++;
+                if (color == "Pink") PinkColorCount++;
+                if (color == "Purple") PurpleColorCount++;
             }
             lblBlack.Text = BlackColorCount.ToString();
             lblPink.Text = PinkColorCount.ToString();

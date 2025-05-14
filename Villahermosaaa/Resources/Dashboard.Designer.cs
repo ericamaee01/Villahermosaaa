@@ -64,7 +64,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogout.Location = new System.Drawing.Point(78, 680);
+            this.btnLogout.Location = new System.Drawing.Point(85, 657);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(130, 34);
             this.btnLogout.TabIndex = 9;
@@ -80,7 +80,7 @@
             this.btnLogs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogs.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLogs.Location = new System.Drawing.Point(78, 590);
+            this.btnLogs.Location = new System.Drawing.Point(85, 563);
             this.btnLogs.Name = "btnLogs";
             this.btnLogs.Size = new System.Drawing.Size(130, 34);
             this.btnLogs.TabIndex = 8;
@@ -96,7 +96,7 @@
             this.btnInactive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInactive.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInactive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnInactive.Location = new System.Drawing.Point(78, 494);
+            this.btnInactive.Location = new System.Drawing.Point(85, 468);
             this.btnInactive.Name = "btnInactive";
             this.btnInactive.Size = new System.Drawing.Size(130, 34);
             this.btnInactive.TabIndex = 7;
@@ -112,7 +112,7 @@
             this.btnActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActive.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActive.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnActive.Location = new System.Drawing.Point(78, 404);
+            this.btnActive.Location = new System.Drawing.Point(85, 376);
             this.btnActive.Name = "btnActive";
             this.btnActive.Size = new System.Drawing.Size(130, 34);
             this.btnActive.TabIndex = 6;
@@ -124,9 +124,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(162, 146);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 173);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -136,7 +136,7 @@
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Century", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(9, 199);
+            this.lblName.Location = new System.Drawing.Point(36, 213);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(76, 23);
@@ -149,8 +149,8 @@
             this.btndashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndashboard.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndashboard.ForeColor = System.Drawing.Color.Black;
-            this.btndashboard.Location = new System.Drawing.Point(78, 326);
-            this.btndashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btndashboard.Location = new System.Drawing.Point(85, 293);
+            this.btndashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btndashboard.Name = "btndashboard";
             this.btndashboard.Size = new System.Drawing.Size(130, 34);
             this.btndashboard.TabIndex = 55;
@@ -171,9 +171,9 @@
             this.sidepanel.Controls.Add(this.btnLogout);
             this.sidepanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidepanel.Location = new System.Drawing.Point(0, 0);
-            this.sidepanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sidepanel.Margin = new System.Windows.Forms.Padding(2);
             this.sidepanel.Name = "sidepanel";
-            this.sidepanel.Size = new System.Drawing.Size(228, 758);
+            this.sidepanel.Size = new System.Drawing.Size(248, 758);
             this.sidepanel.TabIndex = 57;
             // 
             // lblActive
@@ -376,10 +376,10 @@
             this.mainpanel.Controls.Add(this.lblInactive);
             this.mainpanel.Controls.Add(this.lblActive);
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(228, 0);
-            this.mainpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mainpanel.Location = new System.Drawing.Point(248, 0);
+            this.mainpanel.Margin = new System.Windows.Forms.Padding(2);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(754, 758);
+            this.mainpanel.Size = new System.Drawing.Size(734, 758);
             this.mainpanel.TabIndex = 56;
             // 
             // Dashboard

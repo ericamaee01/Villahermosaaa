@@ -51,7 +51,7 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(36, 180);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(69, 24);
             this.btnSearch.TabIndex = 10;
@@ -63,8 +63,8 @@
             // 
             this.btnDELETE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDELETE.ForeColor = System.Drawing.Color.Red;
-            this.btnDELETE.Location = new System.Drawing.Point(123, 535);
-            this.btnDELETE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDELETE.Location = new System.Drawing.Point(123, 513);
+            this.btnDELETE.Margin = new System.Windows.Forms.Padding(2);
             this.btnDELETE.Name = "btnDELETE";
             this.btnDELETE.Size = new System.Drawing.Size(140, 27);
             this.btnDELETE.TabIndex = 9;
@@ -77,7 +77,7 @@
             this.btnADD.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADD.ForeColor = System.Drawing.Color.Blue;
-            this.btnADD.Location = new System.Drawing.Point(455, 537);
+            this.btnADD.Location = new System.Drawing.Point(455, 515);
             this.btnADD.Name = "btnADD";
             this.btnADD.Size = new System.Drawing.Size(173, 26);
             this.btnADD.TabIndex = 12;
@@ -106,14 +106,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(754, 617);
+            this.ClientSize = new System.Drawing.Size(754, 570);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnADD);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDELETE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Active";
             this.Text = "Active";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

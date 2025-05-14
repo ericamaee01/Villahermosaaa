@@ -32,16 +32,16 @@
             this.lblBSED = new System.Windows.Forms.Label();
             this.lblBSBA = new System.Windows.Forms.Label();
             this.lblBSIT = new System.Windows.Forms.Label();
-            this.lblPurple = new System.Windows.Forms.Label();
-            this.lblPink = new System.Windows.Forms.Label();
-            this.lblBlack = new System.Windows.Forms.Label();
-            this.lblCooking = new System.Windows.Forms.Label();
             this.lblSinging = new System.Windows.Forms.Label();
-            this.lblDancing = new System.Windows.Forms.Label();
             this.lblFemale = new System.Windows.Forms.Label();
             this.lblMale = new System.Windows.Forms.Label();
             this.lblInactive = new System.Windows.Forms.Label();
             this.lblActive = new System.Windows.Forms.Label();
+            this.lblCooking = new System.Windows.Forms.Label();
+            this.lblDancing = new System.Windows.Forms.Label();
+            this.lblBlack = new System.Windows.Forms.Label();
+            this.lblPink = new System.Windows.Forms.Label();
+            this.lblPurple = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblBSED
@@ -86,62 +86,6 @@
             this.lblBSIT.Text = "00";
             this.lblBSIT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblPurple
-            // 
-            this.lblPurple.AutoSize = true;
-            this.lblPurple.BackColor = System.Drawing.Color.Transparent;
-            this.lblPurple.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPurple.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPurple.Location = new System.Drawing.Point(627, 442);
-            this.lblPurple.Name = "lblPurple";
-            this.lblPurple.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPurple.Size = new System.Drawing.Size(27, 20);
-            this.lblPurple.TabIndex = 61;
-            this.lblPurple.Text = "00";
-            this.lblPurple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPink
-            // 
-            this.lblPink.AutoSize = true;
-            this.lblPink.BackColor = System.Drawing.Color.Transparent;
-            this.lblPink.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPink.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPink.Location = new System.Drawing.Point(627, 415);
-            this.lblPink.Name = "lblPink";
-            this.lblPink.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPink.Size = new System.Drawing.Size(27, 20);
-            this.lblPink.TabIndex = 60;
-            this.lblPink.Text = "00";
-            this.lblPink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblBlack
-            // 
-            this.lblBlack.AutoSize = true;
-            this.lblBlack.BackColor = System.Drawing.Color.Transparent;
-            this.lblBlack.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBlack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblBlack.Location = new System.Drawing.Point(627, 388);
-            this.lblBlack.Name = "lblBlack";
-            this.lblBlack.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBlack.Size = new System.Drawing.Size(27, 20);
-            this.lblBlack.TabIndex = 59;
-            this.lblBlack.Text = "00";
-            this.lblBlack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCooking
-            // 
-            this.lblCooking.AutoSize = true;
-            this.lblCooking.BackColor = System.Drawing.Color.Transparent;
-            this.lblCooking.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCooking.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblCooking.Location = new System.Drawing.Point(247, 605);
-            this.lblCooking.Name = "lblCooking";
-            this.lblCooking.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCooking.Size = new System.Drawing.Size(27, 20);
-            this.lblCooking.TabIndex = 58;
-            this.lblCooking.Text = "00";
-            this.lblCooking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblSinging
             // 
             this.lblSinging.AutoSize = true;
@@ -155,21 +99,6 @@
             this.lblSinging.TabIndex = 57;
             this.lblSinging.Text = "00";
             this.lblSinging.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDancing
-            // 
-            this.lblDancing.AutoSize = true;
-            this.lblDancing.BackColor = System.Drawing.Color.Transparent;
-            this.lblDancing.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDancing.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDancing.Location = new System.Drawing.Point(247, 658);
-            this.lblDancing.Name = "lblDancing";
-            this.lblDancing.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDancing.Size = new System.Drawing.Size(27, 20);
-            this.lblDancing.TabIndex = 56;
-            this.lblDancing.Text = "00";
-            this.lblDancing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDancing.Click += new System.EventHandler(this.lblDancing_Click);
             // 
             // lblFemale
             // 
@@ -227,27 +156,97 @@
             this.lblActive.Text = "00";
             this.lblActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblCooking
+            // 
+            this.lblCooking.AutoSize = true;
+            this.lblCooking.BackColor = System.Drawing.Color.Transparent;
+            this.lblCooking.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCooking.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblCooking.Location = new System.Drawing.Point(247, 605);
+            this.lblCooking.Name = "lblCooking";
+            this.lblCooking.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCooking.Size = new System.Drawing.Size(27, 20);
+            this.lblCooking.TabIndex = 68;
+            this.lblCooking.Text = "00";
+            this.lblCooking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDancing
+            // 
+            this.lblDancing.AutoSize = true;
+            this.lblDancing.BackColor = System.Drawing.Color.Transparent;
+            this.lblDancing.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDancing.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDancing.Location = new System.Drawing.Point(247, 658);
+            this.lblDancing.Name = "lblDancing";
+            this.lblDancing.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDancing.Size = new System.Drawing.Size(27, 20);
+            this.lblDancing.TabIndex = 69;
+            this.lblDancing.Text = "00";
+            this.lblDancing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblBlack
+            // 
+            this.lblBlack.AutoSize = true;
+            this.lblBlack.BackColor = System.Drawing.Color.Transparent;
+            this.lblBlack.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlack.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblBlack.Location = new System.Drawing.Point(627, 388);
+            this.lblBlack.Name = "lblBlack";
+            this.lblBlack.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblBlack.Size = new System.Drawing.Size(27, 20);
+            this.lblBlack.TabIndex = 70;
+            this.lblBlack.Text = "00";
+            this.lblBlack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPink
+            // 
+            this.lblPink.AutoSize = true;
+            this.lblPink.BackColor = System.Drawing.Color.Transparent;
+            this.lblPink.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPink.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPink.Location = new System.Drawing.Point(627, 415);
+            this.lblPink.Name = "lblPink";
+            this.lblPink.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPink.Size = new System.Drawing.Size(27, 20);
+            this.lblPink.TabIndex = 71;
+            this.lblPink.Text = "00";
+            this.lblPink.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPurple
+            // 
+            this.lblPurple.AutoSize = true;
+            this.lblPurple.BackColor = System.Drawing.Color.Transparent;
+            this.lblPurple.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPurple.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPurple.Location = new System.Drawing.Point(627, 442);
+            this.lblPurple.Name = "lblPurple";
+            this.lblPurple.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPurple.Size = new System.Drawing.Size(27, 20);
+            this.lblPurple.TabIndex = 72;
+            this.lblPurple.Text = "00";
+            this.lblPurple.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(754, 758);
-            this.Controls.Add(this.lblBSED);
-            this.Controls.Add(this.lblBSBA);
-            this.Controls.Add(this.lblBSIT);
             this.Controls.Add(this.lblPurple);
             this.Controls.Add(this.lblPink);
             this.Controls.Add(this.lblBlack);
-            this.Controls.Add(this.lblCooking);
-            this.Controls.Add(this.lblSinging);
             this.Controls.Add(this.lblDancing);
+            this.Controls.Add(this.lblCooking);
+            this.Controls.Add(this.lblBSED);
+            this.Controls.Add(this.lblBSBA);
+            this.Controls.Add(this.lblBSIT);
+            this.Controls.Add(this.lblSinging);
             this.Controls.Add(this.lblFemale);
             this.Controls.Add(this.lblMale);
             this.Controls.Add(this.lblInactive);
             this.Controls.Add(this.lblActive);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "home";
             this.Text = "home";
             this.Load += new System.EventHandler(this.home_Load);
@@ -261,15 +260,15 @@
         private System.Windows.Forms.Label lblBSED;
         private System.Windows.Forms.Label lblBSBA;
         private System.Windows.Forms.Label lblBSIT;
-        private System.Windows.Forms.Label lblPurple;
-        private System.Windows.Forms.Label lblPink;
-        private System.Windows.Forms.Label lblBlack;
-        private System.Windows.Forms.Label lblCooking;
         private System.Windows.Forms.Label lblSinging;
-        private System.Windows.Forms.Label lblDancing;
         private System.Windows.Forms.Label lblFemale;
         private System.Windows.Forms.Label lblMale;
         private System.Windows.Forms.Label lblInactive;
         private System.Windows.Forms.Label lblActive;
+        private System.Windows.Forms.Label lblCooking;
+        private System.Windows.Forms.Label lblDancing;
+        private System.Windows.Forms.Label lblBlack;
+        private System.Windows.Forms.Label lblPink;
+        private System.Windows.Forms.Label lblPurple;
     }
 }

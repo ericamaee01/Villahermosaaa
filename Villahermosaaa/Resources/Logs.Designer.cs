@@ -37,7 +37,7 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(122, 98);
+            this.txtSearch.Location = new System.Drawing.Point(110, 176);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(223, 23);
@@ -48,8 +48,8 @@
             this.btnSearch.BackColor = System.Drawing.Color.HotPink;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(47, 97);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(36, 174);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(69, 24);
             this.btnSearch.TabIndex = 14;
@@ -61,10 +61,10 @@
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(45, 141);
+            this.dataGridView2.Location = new System.Drawing.Point(36, 222);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(515, 229);
+            this.dataGridView2.Size = new System.Drawing.Size(673, 302);
             this.dataGridView2.TabIndex = 12;
             // 
             // Logs
@@ -72,12 +72,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(754, 574);
+            this.ClientSize = new System.Drawing.Size(754, 617);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dataGridView2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Logs";
             this.Text = "Logs";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
