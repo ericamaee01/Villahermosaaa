@@ -26,6 +26,7 @@ namespace Villahermosaaa
         public Form1(string username)
         {
             InitializeComponent();
+            currentUserName = username;
 
         }
 
@@ -146,7 +147,7 @@ namespace Villahermosaaa
                 return;
             }
             Workbook checkBook = new Workbook();
-            checkBook.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            checkBook.LoadFromFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet checkSheet = checkBook.Worksheets[0];
 
             for (int i = 2; i <= checkSheet.LastRow; i++) // skip header
@@ -168,7 +169,7 @@ namespace Villahermosaaa
 
             // Save to Excel
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sh = book.Worksheets[0];
             int r = sh.LastRow + 1;
 
@@ -187,7 +188,7 @@ namespace Villahermosaaa
             sh.Range[r, 13].Value = "1"; // active flag
             sh.Range[r, 14].Value = profilePicture; // picture path
 
-            book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx", ExcelVersion.Version2016);
+            book.SaveToFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx", ExcelVersion.Version2016);
 
             MessageBox.Show("Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -344,7 +345,7 @@ namespace Villahermosaaa
             }
 
             Workbook checkBook = new Workbook();
-            checkBook.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            checkBook.LoadFromFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet checkSheet = checkBook.Worksheets[0];
 
             for (int i = 2; i <= checkSheet.LastRow; i++) // skip header
@@ -362,7 +363,7 @@ namespace Villahermosaaa
 
             // Load the Excel file to update
             Workbook book = new Workbook();
-            book.LoadFromFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
+            book.LoadFromFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx");
             Worksheet sh = book.Worksheets[0];
 
             // Search for the existing row based on username (assuming it's in column 11)
@@ -413,7 +414,7 @@ namespace Villahermosaaa
             }
 
             // Save changes to Excel
-            book.SaveToFile("C:\\Users\\Erica Mae\\source\\repos\\Villahermosaaa\\book\\book1.xlsx", ExcelVersion.Version2016);
+            book.SaveToFile("C:\\Users\\ACT-STUDENT\\source\\repos\\Villahermosaaa\\book\\book1.xlsx", ExcelVersion.Version2016);
 
             MessageBox.Show(isUpdated ? "Successfully updated!" : "Successfully added!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
